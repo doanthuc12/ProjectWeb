@@ -117,35 +117,6 @@ MAC:
 - Có thể chọn RUN -> START (F5)
 - Open folder -> click double vào tên file html.
 
-#BOOTSTRAP
-Cách 1: chèn link online trực tiếp từ web: https://getbootstrap.com/docs/5.2/getting-started/introduction/
-
-- Phần Head:
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-
-- Phần Body (ở cuối)
-  <script
-        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"
-      ></script>
-
-Cách 2: Chèn link ở thư mục Bootstrap đã tải về:
-
-- Phần Head: <link
-      rel="stylesheet"
-      href="./bootstrap-4.6.2-dist//css/bootstrap.min.css"
-    />
-- Phần Body (cuối)
-    <script src="./bootstrap-4.6.2-dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
-
 #ICON
 
 - Chèn link source: <script src="https://kit.fontawesome.com/042e59ddf7.js" crossorigin="anonymous"></script>
@@ -155,3 +126,32 @@ Cách 2: Chèn link ở thư mục Bootstrap đã tải về:
 
 - C1: CHÈN LINK TRỰC TIẾP VÀO <HEAD>: https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
 - C2: Mở link đã chèn trong C1 --> copy path --> tạo file ANIMATION.MIN.CSS --> dán path vào và link với file HTML
+
+---
+
+# Getting Started with Create React App (https://create-react-app.dev/docs/adding-typescript/)
+
+This project was bootstrapped with Create React App.
+
+# Install
+
+**Language**
+I18n (https://react.i18next.com/guides/quick-start) npm install react-i18next i18next --save
+
+**Framework**
+Bootstrap (https://getbootstrap.com/docs/5.0/getting-started/introduction/) npm install bootstrap
+React_Bootstrap (https://react-bootstrap.netlify.app/getting-started/introduction/) npm install react-bootstrap bootstrap
+
+**Package**
+React Router (https://reactrouter.com/en/main) npm install react-router-dom
+
+**Redux**
+(https://redux.js.org/introduction/getting-started)
+
+**Redux toolkit**
+(https://redux-toolkit.js.org/usage/usage-with-typescript)
+npm install redux react-redux @reduxjs/toolkit @types/redux-logger
+
+Note: Toolkit useAppDispatch & useAppSelector
+Declare export type RootState = ReturnType; export type AppDispatch = typeof store.dispatch; type TypedDispatch = ThunkDispatch<T, any, AnyAction>; export const useAppDispatch = () => useDispatch<TypedDispatch>(); export const useAppSelector: TypedUseSelectorHook = useSelector;
+Usage const dispatch = useAppDispatch(); const state = useAppSelector((state: AppState) => state.xxx);
