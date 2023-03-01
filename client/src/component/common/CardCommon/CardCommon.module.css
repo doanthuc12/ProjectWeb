@@ -1,0 +1,53 @@
+.surrounding {
+  width: min-content;
+  height: fit-content;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none;
+  padding: 0 0.5%;
+  margin-top: 1%;
+  box-sizing: border-box;
+}
+.label {
+  font-family: futura-pt, sans-serif;
+}
+.discount {
+  position: absolute;
+  top: 25px;
+  background-color: #fefefe;
+  color: #d01345;
+  font-size: 8px;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  padding: 0px 4px;
+}
+.title {
+  color: #2d2d2d;
+  display: block;
+  font-family: sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  line-height: 20px;
+  margin: 0 0 8px;
+}
+.price {
+  color: #d01340;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+.label_hot {
+  background-color: #525252;
+  color: #f4ffff;
+  position: absolute;
+  margin-top: -11%;
+  margin-left: 139px;
+  font-size: 9px;
+  border-radius: 14px 0 0 14px;
+  letter-spacing: 0.8px;
+  line-height: 16px;
+  padding: 4px 12px 4px 16px;
+  font-family: system-ui;
+  font-weight: 800;
+}
