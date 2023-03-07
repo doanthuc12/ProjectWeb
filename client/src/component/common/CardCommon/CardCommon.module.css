@@ -1,28 +1,39 @@
 .surrounding {
-  width: min-content;
   height: fit-content;
-  justify-content: center;
-  flex-direction: column;
+  /* justify-content: center;
+  flex-direction: column; */
   text-align: left;
   text-decoration: none;
   padding: 0 0.5%;
-  margin-top: 1%;
-  box-sizing: border-box;
+  margin-top: 10%;
+  width: fit-content;
 }
-.label {
-  font-family: futura-pt, sans-serif;
+.top {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.bg_image {
+  height: 302px;
+  width: 237px;
+}
+.image {
+  height: 100%;
 }
 .discount {
   position: absolute;
-  top: 25px;
   background-color: #fefefe;
   color: #d01345;
   font-size: 8px;
   letter-spacing: 0.8px;
   line-height: 16px;
   padding: 0px 4px;
+  margin-top: 15px;
 }
+
 .title {
+  height: 30px;
   color: #2d2d2d;
   display: block;
   font-family: sans-serif;
@@ -37,17 +48,44 @@
   font-weight: 700;
   letter-spacing: 0.8px;
 }
+.label {
+  font-family: futura-pt, sans-serif;
+}
+
 .label_hot {
+  height: 21px;
+  width: 80px;
+  text-align: center;
+  margin-top: 230px;
   background-color: #525252;
   color: #f4ffff;
-  position: absolute;
-  margin-top: -11%;
-  margin-left: 139px;
+  float: right;
+  font-family: system-ui;
   font-size: 9px;
-  border-radius: 14px 0 0 14px;
+  font-weight: 800;
+  text-transform: uppercase;
   letter-spacing: 0.8px;
   line-height: 16px;
-  padding: 4px 12px 4px 16px;
-  font-family: system-ui;
-  font-weight: 800;
+  border-radius: 14px 0 0 14px;
+  padding: 3px 0px 0px 12px;
+}
+.bottom {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.old_price {
+  text-decoration-line: line-through;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  margin-right: 5px;
+}
+
+.new_price {
+  color: #d01340;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
 }

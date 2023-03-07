@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  border: 0;
+}
 .container {
-  max-width: 1366px;
   box-sizing: border-box;
-  margin: 0 auto;
   max-width: 1366px;
-  padding: 0 24px;
+  padding: 0 125px;
+}
+.productList {
   display: flex;
-  /* justify-content: baseline; */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: visible;
+  position: relative;
 }

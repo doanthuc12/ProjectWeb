@@ -2,32 +2,66 @@ import React, { useState } from "react";
 import Styles from "./CardCommon.module.css";
 
 const CardCommon: React.FC<IPropsCardCommon> = (props) => {
-  const { title, price, img, type = "text" } = props;
+  const {
+    title,
+    label,
+    oldPirce,
+    newPrice,
+    discount,
+    defaultImageSrc,
+    hoverImageSrc,
+  } = props;
+  const [imgUrl, setImageUrl] = useState(defaultImageSrc);
+  const handleMouseOver = () => {
+    setImageUrl(hoverImageSrc);
+  };
+
+  const handleMouseLeave = () => {
+    setImageUrl(defaultImageSrc);
+  };
   return (
     <>
       <div className={Styles.surrounding}>
-        {/* <div style={{ width: "238px", height: "317px" }}>
-          {img ?? <span>{img}</span>}
-        </div> */}
-        <img
-          src="https://images.asos-media.com/products/tfnc-bridesmaid-draped-satin-maxi-dress-in-sage-green/203769857-1-sagegreen?$n_320w$&wid=317&fit=constrain"
-          alt="blue dress"
-          style={{ width: "238px", height: "317px" }}
-        ></img>
-        <div className={Styles.bottom}>
-          <span className={Styles.title}>
-            {title ?? <span className="input-group-text">{title}</span>}
-          </span>
-
-          <span className={Styles.label}>
-            <span className={Styles.price}>
-              {price ?? <span>{price}</span>}
-            </span>
-
-            <div className={Styles.discount}>-10%</div>
-            <div className={Styles.label_hot}>
-              <span>SELLING FAST</span>
+        <div className={Styles.top}>
+          {/* <img
+            src={imgUrl}
+            alt="women clothing"
+            style={{ width: "max-content", height: "317px" }}
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
+          ></img>
+          <div>
+            {label ? <div className={Styles.discount}>{discount}</div> : null}
+          </div>
+          <div>
+            {label ? <div className={Styles.label_hot}>{label}</div> : null}
+          </div> */}
+          <div className={Styles.bg_image}>
+            <div
+              className={Styles.image}
+              style={{ backgroundImage: `url(${imgUrl})` }}
+              onMouseOver={handleMouseOver}
+              onMouseLeave={handleMouseLeave}
+            >
+              <div className={Styles.discount}>
+                {discount ? <span>{discount}</span> : null}
+              </div>
+              <div>
+                {label ? <div className={Styles.label_hot}>{label}</div> : null}
+              </div>
             </div>
+          </div>
+        </div>
+
+        <div className={Styles.bottom}>
+          <div className={Styles.title}>
+            {title ?? <div className="input-group-text">{title}</div>}
+          </div>
+          <span className={Styles.old_price}>
+            {oldPirce ?? <span>{oldPirce}</span>}
+          </span>
+          <span className={Styles.new_price}>
+            {newPrice ?? <span>{newPrice}</span>}
           </span>
         </div>
       </div>

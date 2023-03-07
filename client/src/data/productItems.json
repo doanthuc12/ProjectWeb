@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "title": "NIKE AIR MAX 1 SP CONCEPTS MELLOW",
+        "oldPirce": "4,500,000",
+        "newPrice": "5,500,000",
+        "label": "SELLING FAST",
+        "discount": "-10%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 2,
+        "title": "NIKE AIR MAX 1 PRM DUCK HONEY DEW",
+        "oldPirce": "4,000,000",
+        "newPrice": "3,800,000",
+        "discount": "-10%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 3,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "4,500,000",
+        "newPrice": "5,500,000",
+        "label": "SELLING FAST",
+        "discount": "-20%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 4,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "500,000",
+        "newPrice": "450,000",
+        "label": "SELLING FAST",
+        "discount": "-10%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 5,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "3,500,000",
+        "newPrice": "2,000,000",
+        "discount": "-10%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 6,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "4,500,000",
+        "newPrice": "5,500,000",
+        "discount": "-20%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 7,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "2,500,000",
+        "newPrice": "1,500,000",
+        "discount": "-20%",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    },
+    {
+        "id": 8,
+        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
+        "oldPirce": "1,500,000",
+        "newPrice": "500,000",
+        "discount": "-20%",
+        "label": "SELLING FAST",
+        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+    }
+]
