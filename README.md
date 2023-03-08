@@ -25,10 +25,6 @@ RN26
 - Color Highlight
 - Dracula Official (theme)
 
-## Session 02 - Practice & Homeworks
-
-- Vẽ Wireframe: https://www.sketch.com/s/bab4fc21-b247-47e7-8b30-6cf82277ebd2?fbclid=IwAR0pLTvJCq8QdGe0fZVkLXX9ElWW-Ct52tuP6tscmlf9E9YG_Fambo9b7vM
-
 ## Một số công cụ vẽ Wireframe + Mockup
 
 - https://moqups.com/
@@ -131,7 +127,7 @@ MAC:
 
 # Getting Started with Create React App (https://create-react-app.dev/docs/adding-typescript/)
 
-This project was bootstrapped with Create React App.
+npx create-react-app my-app --template typescript
 
 # Install
 

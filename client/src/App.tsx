@@ -12,10 +12,10 @@ import Product from "./component/pages/Product/Product";
 function App() {
   return (
     <>
-      <Product />
+      {/* <Product /> */}
       {/* <CardCommon /> */}
       {/* <Home /> */}
-      {/* <Login /> */}
+      <Login />
     </>
   );
 }

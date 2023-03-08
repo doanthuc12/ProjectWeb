@@ -1,45 +1,40 @@
 import React, { useState } from "react";
 import Styles from "./InputCommon.module.css";
 
-const defaultState: IPropsInputCommon = {
-  isShowPassword: false,
-};
-
 const InputCommon: React.FC<IPropsInputCommon> = (props) => {
   const {
     label,
-    color = "red",
-    isInputPassword = false,
+    color = "gray",
+    isInputPassword = true,
     type = "text",
   } = props;
-  const [state, setState] = useState<IPropsInputCommon>(defaultState);
-  const { isShowPassword, colorTextPassword } = state;
+  const [isShowPassword, setIsShowPassword] = useState(false);
 
   const handleShowPassword = () => {
-    setState((prev) => {
-      console.log(prev);
-      return {
-        ...prev,
-        isShowPassword: !prev.isShowPassword,
-        colorTextPassword: prev.isShowPassword ? "red" : "blue",
-      };
-    });
+    setIsShowPassword(!isShowPassword);
   };
+
   return (
     <>
       <div className={Styles.input_group}>
-        {label ?? <span className="input-group-text">{label}":"</span>}
+        {label && <span className="input-group-text">{label}:</span>}
         <input
-          type={isInputPassword ? "password" : type}
-          aria-label="First name"
+          type={isInputPassword && !isShowPassword ? "password" : type}
+          aria-label="Input field"
           className={`form-control ${Styles.input_text}`}
           style={{
             color: color,
           }}
         />
-        <span onClick={handleShowPassword} style={{ color: colorTextPassword }}>
-          {/* {isShowPassword ? "show" : "hide"} */}
-        </span>
+        {isInputPassword && (
+          <span
+            onClick={handleShowPassword}
+            style={{ color: isShowPassword ? "red" : "blue" }}
+          >
+            {isShowPassword ? "Hide" : "Show"}
+            {/* <i className={`bi bi-eye${isShowPassword ? "-slash" : ""}`} /> */}
+          </span>
+        )}
       </div>
     </>
   );

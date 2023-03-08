@@ -24,7 +24,7 @@ const Login: React.FC = () => {
           {/* INPUT */}
           <div className={Styles.form}>
             <div className={Styles.field}>
-              <InputCommon label="EMAIL ADDRESS" />
+              <InputCommon label="EMAIL ADDRESS" isInputPassword={false} />
               <InputCommon label="PASSWORD" />
             </div>
 

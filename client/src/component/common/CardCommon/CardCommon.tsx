@@ -23,19 +23,6 @@ const CardCommon: React.FC<IPropsCardCommon> = (props) => {
     <>
       <div className={Styles.surrounding}>
         <div className={Styles.top}>
-          {/* <img
-            src={imgUrl}
-            alt="women clothing"
-            style={{ width: "max-content", height: "317px" }}
-            onMouseOver={handleMouseOver}
-            onMouseLeave={handleMouseLeave}
-          ></img>
-          <div>
-            {label ? <div className={Styles.discount}>{discount}</div> : null}
-          </div>
-          <div>
-            {label ? <div className={Styles.label_hot}>{label}</div> : null}
-          </div> */}
           <div className={Styles.bg_image}>
             <div
               className={Styles.image}
