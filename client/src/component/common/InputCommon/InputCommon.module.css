@@ -1,13 +1,19 @@
-.input_text {
-  box-sizing: border-box;
+.input {
+  /* box-sizing: border-box; */
   position: relative;
   height: 20px;
-  width: 100%;
+  width: 90%;
   border: 1px solid rgba(0, 0, 0, 0.664);
 
-  padding: 25px;
+  padding: 20px;
   margin-top: 15px;
   margin-bottom: 25px;
+  display: flex;
+}
+.input_text {
+  border: none;
+  width: 90%;
+  height: 100%;
 }
 .input_group {
   margin-top: 2%;
