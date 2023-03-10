@@ -2,17 +2,35 @@ import React, { useState } from "react";
 import Styles from "./InputCommon.module.css";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
+interface IStateInputCommon {
+  isShowPassword: boolean;
+  isForcus: boolean;
+}
+
+const defaultValueState: IStateInputCommon = {
+  isForcus: false,
+  isShowPassword: false,
+};
+
 const InputCommon: React.FC<IPropsInputCommon> = (props) => {
   const {
     label,
     color = "gray",
     isInputPassword = true,
     type = "text",
+    className,
+    placeholder,
   } = props;
-  const [isShowPassword, setIsShowPassword] = useState(false);
+  const [state, setState] = useState<IStateInputCommon>(defaultValueState);
+  const { isShowPassword, isForcus } = state;
 
   const handleShowPassword = () => {
-    setIsShowPassword(!isShowPassword);
+    setState((prev) => {
+      return {
+        ...prev,
+        isShowPassword: !prev.isShowPassword,
+      };
+    });
   };
 
   return (
@@ -23,10 +41,11 @@ const InputCommon: React.FC<IPropsInputCommon> = (props) => {
           <input
             type={isInputPassword && !isShowPassword ? "password" : type}
             aria-label="Input field"
-            className={`form-control ${Styles.input_text}`}
+            className={`form-control ${Styles.input_text} ${className ?? ""}`}
             style={{
               color: color,
             }}
+            placeholder={placeholder ?? ""}
           />
           {isInputPassword && (
             <span

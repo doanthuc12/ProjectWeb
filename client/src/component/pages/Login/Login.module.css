@@ -12,6 +12,7 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 3%;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 /* HEADER */
@@ -181,7 +182,7 @@
 }
 .social_text {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   color: #2d2d2d;
   letter-spacing: 0.6px;
   font-weight: 650;

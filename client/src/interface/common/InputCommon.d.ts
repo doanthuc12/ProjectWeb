@@ -3,6 +3,8 @@ interface IPropsInputCommon {
   color?: string;
   isInputPassword?: boolean;
   type?: "text" | "password" | "date" | "color" | string;
+  className?: string;
+  placeholder?: string;
 }
 
 interface IPropsInputCommon {

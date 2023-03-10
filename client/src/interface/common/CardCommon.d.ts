@@ -6,6 +6,7 @@ interface IPropsCardCommon {
   hoverImageSrc?: string;
   discount?: string;
   label?: string;
-  oldPirce?: string;
+  normalPrice?: string;
+  oldPrice?: string;
   newPrice?: string;
 }

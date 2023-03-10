@@ -1,10 +1,32 @@
-import React from "react";
-import InputCommon from "../../common/InputCommon/InputCommon";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { fetchProducts } from "../../../redux/product/Product.service";
+import { RootState, useAppDispatch } from "../../../redux/Store";
+import { fetchUser } from "../../../redux/user/User.service";
+import InputCommon from "../../common/Input/InputCommon/InputCommon";
 
 const Home: React.FC = () => {
+  const { loading, error } = useSelector((state: RootState) => state.common);
+
+  const { user } = useSelector((state: RootState) => state.user);
+
+  const { products } = useSelector((state: RootState) => state.product);
+
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUser("1"));
+    dispatch(fetchProducts());
+  }, []);
+
+  useEffect(() => {
+    console.log(products, loading, error);
+  }, [products]);
+
   return (
     <div className="App">
-      <form>
+      name : {user?.name}
+      {/* <form>
         <div className="mb-3">
           <InputCommon label="Username" />
         </div>
@@ -17,7 +39,7 @@ const Home: React.FC = () => {
         <button type="submit" className="btn btn-primary">
           Submit
         </button>
-      </form>
+      </form> */}
     </div>
   );
 };

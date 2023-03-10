@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import numeral from "numeral";
 import Styles from "./CardCommon.module.css";
 
 const CardCommon: React.FC<IPropsCardCommon> = (props) => {
   const {
     title,
     label,
-    oldPirce,
+    normalPrice,
+    oldPrice,
     newPrice,
     discount,
     defaultImageSrc,
@@ -19,6 +21,10 @@ const CardCommon: React.FC<IPropsCardCommon> = (props) => {
   const handleMouseLeave = () => {
     setImageUrl(defaultImageSrc);
   };
+  const formattedDiscount = discount
+    ? numeral(parseFloat(discount) / 100).format("0%")
+    : null;
+
   return (
     <>
       <div className={Styles.surrounding}>
@@ -31,7 +37,7 @@ const CardCommon: React.FC<IPropsCardCommon> = (props) => {
               onMouseLeave={handleMouseLeave}
             >
               <div className={Styles.discount}>
-                {discount ? <span>{discount}</span> : null}
+                {formattedDiscount ? <span>{formattedDiscount}</span> : null}
               </div>
               <div>
                 {label ? <div className={Styles.label_hot}>{label}</div> : null}
@@ -44,12 +50,23 @@ const CardCommon: React.FC<IPropsCardCommon> = (props) => {
           <div className={Styles.title}>
             {title ?? <div className="input-group-text">{title}</div>}
           </div>
-          <span className={Styles.old_price}>
-            {oldPirce ?? <span>{oldPirce}</span>}
-          </span>
-          <span className={Styles.new_price}>
-            {newPrice ?? <span>{newPrice}</span>}
-          </span>
+          <div className={Styles.price}>
+            <span className={Styles.normal_price}>
+              {normalPrice ? (
+                <span>{numeral(normalPrice).format("$0,0.00")}</span>
+              ) : null}
+            </span>
+            <span className={Styles.old_price}>
+              {oldPrice ? (
+                <span>{numeral(oldPrice).format("$0,0.00")}</span>
+              ) : null}
+            </span>
+            <span className={Styles.new_price}>
+              {newPrice ? (
+                <span>{numeral(newPrice).format("$0,0.00")}</span>
+              ) : null}
+            </span>
+          </div>
         </div>
       </div>
     </>

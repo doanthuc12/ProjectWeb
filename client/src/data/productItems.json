@@ -2,76 +2,75 @@
     {
         "id": 1,
         "title": "ASOS DESIGN batwing sleeve plunge mini dress in red",
-        "oldPirce": "££49.00",
+        "normalPrice": "49",
         "label": "SELLING FAST",
-        "discount": "-10%",
+        "discount": "-10",
         "defaultImageSrc": "https://images.asos-media.com/products/asos-design-batwing-sleeve-plunge-mini-dress-in-red/204080684-1-red?$n_240w$&wid=238&fit=constrain",
         "hoverImageSrc": "https://images.asos-media.com/products/asos-design-batwing-sleeve-plunge-mini-dress-in-red/204080684-2?$n_240w$&wid=238&fit=constrain"
     },
     {
         "id": 2,
         "title": "ASOS EDITION Ada cross back crepe wedding dress with fishtail",
-        "oldPirce": "£189.00",
-        "newPrice": "£66.50",
-        "discount": "-64%",
+        "oldPrice": "189",
+        "newPrice": "66",
+        "discount": "-64",
         "defaultImageSrc": "https://images.asos-media.com/products/asos-edition-ada-cross-back-crepe-wedding-dress-with-fishtail/200748015-1-ivory?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-edition-ada-cross-back-crepe-wedding-dress-with-fishtail/200748015-2?$n_240w$&wid=40&fit=constrain"
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-edition-ada-cross-back-crepe-wedding-dress-with-fishtail/200748015-2?$n_240w$&wid=238&fit=constrain"
     },
     {
         "id": 3,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£4,500,000",
-        "newPrice": "5,500,000",
+        "title": "ASOS DESIGN Tall tie front button through midi dress with floral embroidery in navy",
+        "normalPrice": "66",
         "label": "SELLING FAST",
-        "discount": "-20%",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "discount": "-20",
+        "defaultImageSrc": "https://images.asos-media.com/products/asos-design-tall-tie-front-button-through-midi-dress-with-floral-embroidery-in-navy/200932036-1-navy?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-tall-tie-front-button-through-midi-dress-with-floral-embroidery-in-navy/200932036-2?$n_240w$&wid=238&fit=constrain"
     },
     {
         "id": 4,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£500,000",
-        "newPrice": "450,000",
+        "title": "Miss Selfridge diamante trim blazer in black",
+        "oldPrice": "70",
+        "newPrice": "56",
         "label": "SELLING FAST",
-        "discount": "-10%",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-cross-front-midi-dress-in-pink/203769813-1-pink?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "discount": "-20",
+        "defaultImageSrc": "https://images.asos-media.com/products/miss-selfridge-diamante-trim-blazer-in-black/203159117-1-black?$n_240w$&wid=238&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/miss-selfridge-diamante-trim-blazer-in-black/203159117-2?$n_240w$&wid=238&fit=constrain"
     },
     {
         "id": 5,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£3,500,000",
-        "newPrice": "2,000,000",
-        "discount": "-10%",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "title": "The Frolic Exclusive beach wrap dress in white",
+        "oldPrice": "30",
+        "newPrice": "21",
+        "label": "SELLING FAST",
+        "discount": "-30",
+        "defaultImageSrc": "https://images.asos-media.com/products/the-frolic-exclusive-beach-wrap-dress-in-white/202754913-1-white?$n_320w$&wid=317&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/the-frolic-exclusive-beach-wrap-dress-in-white/202754913-2?$n_320w$&wid=317&fit=constrain"
     },
     {
         "id": 6,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£4,500,000",
-        "newPrice": "5,500,000",
-        "discount": "-20%",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "title": "ASOS DESIGN Tall jersey tapered suit trousers in black",
+        "oldPrice": "20",
+        "newPrice": "15",
+        "label": "SELLING FAST",
+        "discount": "-25",
+        "defaultImageSrc": "https://images.asos-media.com/products/asos-design-tall-jersey-tapered-suit-trousers-in-black/201673219-1-black?$n_320w$&wid=317&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-tall-jersey-tapered-suit-trousers-in-black/201673219-2?$n_320w$&wid=317&fit=constrain"
     },
     {
         "id": 7,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£2,500,000",
-        "newPrice": "1,500,000",
-        "discount": "-20%",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "title": "ASOS LUXE extreme bardot sleeve jacquard mini dress in floral jacquard",
+        "oldPrice": "95",
+        "newPrice": "76",
+        "discount": "-20",
+        "defaultImageSrc": "https://images.asos-media.com/products/asos-luxe-extreme-bardot-sleeve-jacquard-mini-dress-in-floral-jacquard/203529881-1-multi?$n_320w$&wid=317&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/asos-luxe-extreme-bardot-sleeve-jacquard-mini-dress-in-floral-jacquard/203529881-2?$n_320w$&wid=317&fit=constrain"
     },
     {
         "id": 8,
-        "title": "NIKE AIR MAX 1 MASTER MAGMA ORANGE (W)",
-        "oldPirce": "£1,500,000",
-        "newPrice": "500,000",
-        "discount": "-20%",
+        "title": "New Look cargo maxi skirt in black",
         "label": "SELLING FAST",
-        "defaultImageSrc": "https://images.asos-media.com/products/tfnc-bridesmaid-flutter-sleeve-v-neck-dress-in-sage-green/201371462-1-sagegreen?$n_240w$&wid=238&fit=constrain",
-        "hoverImageSrc": "https://images.asos-media.com/products/asos-design-lace-mini-tea-dress-with-tie-sleeve-detail-in-white/201596280-1-white?$n_240w$&wid=238&fit=constrain"
+        "normalPrice": "29.99",
+        "defaultImageSrc": "https://images.asos-media.com/products/new-look-cargo-maxi-skirt-in-black/204289600-1-black?$n_320w$&wid=317&fit=constrain",
+        "hoverImageSrc": "https://images.asos-media.com/products/new-look-cargo-maxi-skirt-in-black/204289600-2?$n_320w$&wid=317&fit=constrain"
     }
 ]

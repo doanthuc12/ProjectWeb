@@ -1,0 +1,30 @@
+.bot_btn {
+  width: auto;
+  color: white;
+  border: none;
+  padding: 0 10px;
+  letter-spacing: 0.8px;
+  background-color: #525050;
+  line-height: 50px;
+  text-transform: none;
+  box-sizing: border-box;
+}
+.background {
+  font-weight: 700;
+  transform: skew(-12deg);
+  background: #d01345;
+  font-size: 13px;
+}
+.bot_textbtn {
+  letter-spacing: 0.8px;
+}
+
+/* Hover effects */
+.bot_btn:hover {
+  color: #2d2d2d;
+  background-color: #eeeeee;
+}
+/* .background:hover {
+  color: #2d2d2d;
+  background-color: #eeeeee;
+} */
