@@ -1,13 +1,13 @@
 import React from "react";
 import InputCommon from "../../common/Input/InputCommon/InputCommon";
-import Styles from "./Login.module.css";
+import Styles from "./SignIn.module.css";
 import logo from "../../../images/logo_asos.png";
 import facebook from "../../../images/facebook.png";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../utils/constants/routes";
 import { useLocation } from "react-router-dom";
 
-const Login: React.FC = () => {
+const SignIn: React.FC = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
   const isSigninPage = location.pathname === "/signin";
@@ -54,7 +54,7 @@ const Login: React.FC = () => {
             </div>
 
             <div className={Styles.submit}>
-              <div className={Styles.sign_in}>Join ASOS</div>
+              <div className={Styles.sign_in}>Sign in</div>
             </div>
             <div className={Styles.text}>Forgot password?</div>
           </div>
@@ -70,7 +70,7 @@ const Login: React.FC = () => {
                 color: "#222222",
               }}
             >
-              <h3>OR SIGN UP WITH ...</h3>
+              <h3>OR SIGN IN WITH ...</h3>
             </div>
             <div className={Styles.options_social}>
               <div className={Styles.social_container}>
@@ -121,4 +121,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default SignIn;

@@ -139,15 +139,7 @@ const NavBarLayout: React.FC = () => {
           ))}
           {/* <ButtonCommon title="New in" background={false} />
           <ButtonCommon title="Clothing" background={false} />
-          <ButtonCommon title="Dresses" background={false} />
-          <ButtonCommon title="Shoes" background={false} />
-          <ButtonCommon title="Accessories" background={false} />
-          <ButtonCommon title="Sportswear" background={false} />
-          <ButtonCommon title="Topshop" background={false} />
-          <ButtonCommon title="Face + Body" background={false} />
-          <ButtonCommon title="Brands" background={false} />
-          <ButtonCommon title="Outlet" background={true} />
-          <ButtonCommon title="Marketplace" background={false} /> */}
+           */}
         </div>
       </div>
     </>

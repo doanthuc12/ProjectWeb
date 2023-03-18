@@ -5,9 +5,31 @@ import AuthBaseLayout from "./AuthBaseLayout/AuthBaseLayout";
 
 const PrivateRouter: React.FC = () => {
   const privateRoutes = [
+    // {
+    //   path: ROUTES.ADMIN_DASHBOARD,
+    //   element: lazy(() => import("../pages/Home/Home")),
+    // },
     {
-      path: ROUTES.ADMIN_DASHBOARD,
-      element: lazy(() => import("../pages/Home/Home")),
+      path: ROUTES.ADMIN_MEN,
+      element: lazy(() => import("../pages/HomePage/HomePage")),
+      type: "men",
+    },
+    {
+      path: ROUTES.ADMIN_WOMEN,
+      element: lazy(() => import("../pages/HomePage/HomePage")),
+      type: "women",
+    },
+    {
+      path: ROUTES.SIGNUP,
+      element: lazy(() => import("../pages/Login/Login")),
+    },
+    {
+      path: ROUTES.SIGNIN,
+      element: lazy(() => import("../pages/SignIn/SignIn")),
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT,
+      element: lazy(() => import("../pages/Product/Product")),
     },
     {
       path: ROUTES.ADMIN_ABOUT,
@@ -27,7 +49,7 @@ const PrivateRouter: React.FC = () => {
               path={route.path}
               element={
                 <React.Suspense fallback={<>...</>}>
-                  {<route.element />}
+                  <route.element type={route.type} />
                 </React.Suspense>
               }
               key={index}
