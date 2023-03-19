@@ -22,6 +22,7 @@
   padding: 0;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 .icon_social {
   margin-left: 60px;

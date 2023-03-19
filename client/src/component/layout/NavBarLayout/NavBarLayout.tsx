@@ -7,7 +7,6 @@ import { TbMessageDots } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiShoppingBagLine } from "react-icons/ri";
 import "animate.css";
-
 import ButtonCommon from "../../common/ButtonCommon/ButtonCommon";
 import InputCommon from "../../common/Input/InputCommon/InputCommon";
 import InputSearchCommon from "../../common/Input/InputSearchCommon/InputSearchCommon";
@@ -16,6 +15,9 @@ import { ROUTES } from "../../../utils/constants/routes";
 import { useLocation } from "react-router-dom";
 
 const NavBarLayout: React.FC = () => {
+  const location = useLocation();
+  const isWomenPage = location.pathname === "/women";
+  const isMenPage = location.pathname === "/men";
   const [showTable, setShowTable] = useState(false);
 
   const handleHover = () => {
@@ -24,13 +26,6 @@ const NavBarLayout: React.FC = () => {
   const handleCloseTable = () => {
     setShowTable(false);
   };
-  // const handleIconClick = () => {
-  //   setShowTable(!showTable);
-  // };
-  const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
-  const isSigninPage = location.pathname === "/signin";
-
   const listNav = useMemo(
     () => [
       {
@@ -114,12 +109,24 @@ const NavBarLayout: React.FC = () => {
                 </a>
               </span>
               <ul className={Styles.gender_group}>
-                <li className={Styles.gender}>
-                  <span>WOMEN</span>
-                </li>
-                <li className={Styles.gender}>
-                  <span>MEN</span>
-                </li>
+                <Link to={ROUTES.ADMIN_WOMEN}>
+                  <div
+                    className={`${Styles.gender} ${
+                      isWomenPage ? Styles.gender_active : ""
+                    }`}
+                  >
+                    <span>WOMEN</span>
+                  </div>
+                </Link>
+                <Link to={ROUTES.ADMIN_MEN}>
+                  <div
+                    className={`${Styles.gender} ${
+                      isMenPage ? Styles.gender_active : ""
+                    }`}
+                  >
+                    <span>MEN</span>
+                  </div>
+                </Link>
               </ul>
               <div className={Styles.mid_search}>
                 <div className={Styles.mid_input}>
@@ -127,11 +134,7 @@ const NavBarLayout: React.FC = () => {
                     className={Styles.mid_input_text}
                     placeholder="Search for itmes and brands"
                   />
-                  {/* <input
-                    className={Styles.mid_input_text}
-                    type="text"
-                    placeholder="Search for itmes and brands"
-                  /> */}
+
                   <span>
                     <FiSearch />
                   </span>

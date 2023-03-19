@@ -1,3 +1,4 @@
+import { type } from "os";
 import React, { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ROUTES } from "../../utils/constants/routes";
@@ -5,23 +6,27 @@ import AuthBaseLayout from "./AuthBaseLayout/AuthBaseLayout";
 
 const PrivateRouter: React.FC = () => {
   const privateRoutes = [
-    // {
-    //   path: ROUTES.ADMIN_DASHBOARD,
-    //   element: lazy(() => import("../pages/Home/Home")),
-    // },
     {
       path: ROUTES.ADMIN_MEN,
       element: lazy(() => import("../pages/HomePage/HomePage")),
-      type: "men",
+      props: {
+        type: "men",
+      } as IHomePage,
     },
     {
       path: ROUTES.ADMIN_WOMEN,
       element: lazy(() => import("../pages/HomePage/HomePage")),
-      type: "women",
+      props: {
+        type: "women",
+      } as IHomePage,
+    },
+    {
+      path: "/",
+      element: lazy(() => import("../pages/HomePage/HomePage")),
     },
     {
       path: ROUTES.SIGNUP,
-      element: lazy(() => import("../pages/Login/Login")),
+      element: lazy(() => import("../pages/SignUp/SignUp")),
     },
     {
       path: ROUTES.SIGNIN,
@@ -44,12 +49,16 @@ const PrivateRouter: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<AuthBaseLayout />}>
-          {privateRoutes.map((route, index) => (
+          {privateRoutes.map((route: any, index) => (
             <Route
               path={route.path}
               element={
-                <React.Suspense fallback={<>...</>}>
-                  <route.element type={route.type} />
+                <React.Suspense fallback={<>Loading...</>}>
+                  {route?.props ? (
+                    <route.element {...route.props} />
+                  ) : (
+                    <route.element />
+                  )}
                 </React.Suspense>
               }
               key={index}

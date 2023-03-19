@@ -116,6 +116,9 @@
 .gender:hover {
   background-color: #525050;
 }
+.gender_active {
+  background-color: #525050;
+}
 /* Search Input */
 .mid_search {
   width: 835px;

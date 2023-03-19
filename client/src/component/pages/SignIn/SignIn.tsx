@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 
 const SignIn: React.FC = () => {
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isSignUpPage = location.pathname === "/signup";
   const isSigninPage = location.pathname === "/signin";
 
   return (
@@ -17,7 +17,7 @@ const SignIn: React.FC = () => {
       <div className={Styles.container}>
         {/* HEADER */}
         <div className={Styles.logo}>
-          <Link to={ROUTES.ADMIN_WOMEN}>
+          <Link to={"/"}>
             <img src={logo} alt="logo asos" />
           </Link>
         </div>
@@ -29,7 +29,7 @@ const SignIn: React.FC = () => {
             <Link to={ROUTES.SIGNUP}>
               <div
                 className={`${Styles.titleJ} ${
-                  isLoginPage ? Styles.active : ""
+                  isSignUpPage ? Styles.active : ""
                 }`}
               >
                 Join

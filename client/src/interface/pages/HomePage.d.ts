@@ -1,4 +1,3 @@
-interface IPropsHomePage {
-  type: "women" | "men" | any;
-  // list: { id: number; text: string }[];
+interface IHomePage {
+  type?: "men" | "women" | undefined;
 }

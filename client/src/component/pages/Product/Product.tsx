@@ -4,6 +4,7 @@ import Styles from "./Product.module.css";
 import { Col, Row } from "react-bootstrap";
 import productItems from "../../../data/productItems.json";
 import NavBarLayout from "../../layout/NavBarLayout/NavBarLayout";
+import FooterLayout from "../../layout/FooterLayout/FooterLayout";
 
 const Product: React.FC = () => {
   return (
@@ -21,6 +22,9 @@ const Product: React.FC = () => {
             </Row>
           ))}
         </div>
+      </div>
+      <div className="navbar">
+        <FooterLayout />
       </div>
     </>
   );

@@ -51,7 +51,11 @@ const FooterLayout: React.FC = () => {
           <div className={Styles.top_social}>
             <ul className={Styles.social_group}>
               <li className={Styles.icon_social}>
-                <a href="https://www.facebook.com/ASOS/">
+                <a
+                  href="https://www.facebook.com/ASOS/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
                   <img
                     className={Styles.icon}
                     src="https://www.chsica.org/wp-content/uploads/2020/10/Facebook-Logo-PNG-Transparent-Like-17.png"
@@ -60,7 +64,11 @@ const FooterLayout: React.FC = () => {
                 </a>
               </li>
               <li className={Styles.icon_social}>
-                <a href="https://www.instagram.com/asos/">
+                <a
+                  href="https://www.instagram.com/asos/"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
                   <img
                     className={Styles.icon}
                     src="https://th.bing.com/th/id/R.1d3bf019927dbe6af973dd3d32db862f?rik=rCTUhmEzwuVFnw&pid=ImgRaw&r=0"
@@ -69,7 +77,11 @@ const FooterLayout: React.FC = () => {
                 </a>
               </li>
               <li className={Styles.icon_social}>
-                <a href="https://www.snapchat.com/add/asosfashion">
+                <a
+                  href="https://www.snapchat.com/add/asosfashion"
+                  target={"_blank"}
+                  rel="noreferrer"
+                >
                   <img
                     className={Styles.icon}
                     src="https://th.bing.com/th/id/OIP.ryBlLQ-nhSEQmXElbG2SNwHaHa?w=218&h=218&c=7&r=0&o=5&pid=1.7"
