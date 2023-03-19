@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import Styles from "./NavBarLayout.module.css";
 
 import { FiSearch } from "react-icons/fi";
-import { BsBox2, BsPerson, BsQuestionCircle } from "react-icons/bs";
+import { BsBox2, BsPerson, BsQuestionCircle, BsX } from "react-icons/bs";
 import { TbMessageDots } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiShoppingBagLine } from "react-icons/ri";
@@ -21,12 +21,12 @@ const NavBarLayout: React.FC = () => {
   const handleHover = () => {
     setShowTable(true);
   };
-  const handleLeave = () => {
+  const handleCloseTable = () => {
     setShowTable(false);
   };
-  const handleIconClick = () => {
-    setShowTable(!showTable);
-  };
+  // const handleIconClick = () => {
+  //   setShowTable(!showTable);
+  // };
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
   const isSigninPage = location.pathname === "/signin";
@@ -144,7 +144,7 @@ const NavBarLayout: React.FC = () => {
                   className={Styles.widgets}
                   onMouseEnter={handleHover}
                   onMouseOver={handleHover}
-                  onMouseDownCapture={handleLeave}
+                  // onMouseDownCapture={handleLeave}
                   // onClick={handleIconClick}
                 >
                   <BsPerson className={Styles.widgets_icon} />
@@ -153,6 +153,12 @@ const NavBarLayout: React.FC = () => {
                   <div
                     className={`animate__animated animate__fadeIn ${Styles.account_table}`}
                   >
+                    <button
+                      className={Styles.close_button}
+                      onClick={handleCloseTable}
+                    >
+                      <BsX />
+                    </button>
                     <div className={Styles.table_container}>
                       <div className={Styles.table_top}>
                         <Link to={ROUTES.SIGNUP}>
