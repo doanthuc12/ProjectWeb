@@ -1,15 +1,36 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import Styles from "./NavBarLayout.module.css";
 
 import { FiSearch } from "react-icons/fi";
-import { BsPerson } from "react-icons/bs";
+import { BsBox2, BsPerson, BsQuestionCircle } from "react-icons/bs";
+import { TbMessageDots } from "react-icons/tb";
 import { AiOutlineHeart } from "react-icons/ai";
 import { RiShoppingBagLine } from "react-icons/ri";
+import "animate.css";
+
 import ButtonCommon from "../../common/ButtonCommon/ButtonCommon";
 import InputCommon from "../../common/Input/InputCommon/InputCommon";
 import InputSearchCommon from "../../common/Input/InputSearchCommon/InputSearchCommon";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../../../utils/constants/routes";
+import { useLocation } from "react-router-dom";
 
 const NavBarLayout: React.FC = () => {
+  const [showTable, setShowTable] = useState(false);
+
+  const handleHover = () => {
+    setShowTable(true);
+  };
+  const handleLeave = () => {
+    setShowTable(false);
+  };
+  const handleIconClick = () => {
+    setShowTable(!showTable);
+  };
+  const location = useLocation();
+  const isLoginPage = location.pathname === "/login";
+  const isSigninPage = location.pathname === "/signin";
+
   const listNav = useMemo(
     () => [
       {
@@ -60,6 +81,7 @@ const NavBarLayout: React.FC = () => {
     ],
     []
   );
+
   return (
     <>
       <div className={Styles.container}>
@@ -117,9 +139,82 @@ const NavBarLayout: React.FC = () => {
               </div>
             </div>
             <div className={Styles.mid_right_group}>
-              <button className={Styles.widgets}>
-                <BsPerson className={Styles.widgets_icon} />
-              </button>
+              <div className={Styles.widgets_wrapper}>
+                <button
+                  className={Styles.widgets}
+                  onMouseEnter={handleHover}
+                  onMouseOver={handleHover}
+                  onMouseDownCapture={handleLeave}
+                  // onClick={handleIconClick}
+                >
+                  <BsPerson className={Styles.widgets_icon} />
+                </button>
+                {showTable && (
+                  <div
+                    className={`animate__animated animate__fadeIn ${Styles.account_table}`}
+                  >
+                    <div className={Styles.table_container}>
+                      <div className={Styles.table_top}>
+                        <Link to={ROUTES.SIGNUP}>
+                          <div className={Styles.titleJ}>Join</div>
+                        </Link>
+                        <Link to={ROUTES.SIGNIN}>
+                          <div className={Styles.titleS}>Sign in</div>
+                        </Link>
+                      </div>
+
+                      <div className={Styles.table_bot}>
+                        <ul style={{ padding: "0px", margin: "10px" }}>
+                          <li className={Styles.wrap}>
+                            <div className={Styles.wrap_icon}>
+                              <BsPerson className={Styles.icon} />
+                            </div>
+                            <Link to={ROUTES.SIGNUP}>
+                              <div className={Styles.wrap_text}>
+                                <span className={Styles.text}>My Account</span>
+                              </div>
+                            </Link>
+                          </li>
+                          <li className={Styles.wrap}>
+                            <div className={Styles.wrap_icon}>
+                              <BsBox2 className={Styles.icon} />
+                            </div>
+                            <Link to={ROUTES.SIGNUP}>
+                              <div className={Styles.wrap_text}>
+                                <span className={Styles.text}>My Orders</span>
+                              </div>
+                            </Link>
+                          </li>
+                          <li className={Styles.wrap}>
+                            <div className={Styles.wrap_icon}>
+                              <BsQuestionCircle className={Styles.icon} />
+                            </div>
+                            <Link to={ROUTES.SIGNUP}>
+                              <div className={Styles.wrap_text}>
+                                <span className={Styles.text}>
+                                  Returns Information
+                                </span>
+                              </div>
+                            </Link>
+                          </li>
+                          <li className={Styles.wrap}>
+                            <div className={Styles.wrap_icon}>
+                              <TbMessageDots className={Styles.icon} />
+                            </div>
+                            <Link to={ROUTES.SIGNUP}>
+                              <div className={Styles.wrap_text}>
+                                <span className={Styles.text}>
+                                  Contact Preferences
+                                </span>
+                              </div>
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <button className={Styles.widgets}>
                 <AiOutlineHeart className={Styles.widgets_icon} />
               </button>
@@ -137,9 +232,6 @@ const NavBarLayout: React.FC = () => {
               key={`item__nav__${item.id}`}
             />
           ))}
-          {/* <ButtonCommon title="New in" background={false} />
-          <ButtonCommon title="Clothing" background={false} />
-           */}
         </div>
       </div>
     </>

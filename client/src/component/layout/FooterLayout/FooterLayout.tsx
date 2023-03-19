@@ -32,7 +32,6 @@ const FooterLayout: React.FC = () => {
           { id: 1, text: "Mobile and ASOS apps" },
           { id: 2, text: "ASOS Marketplace" },
           { id: 3, text: "Gift vouchers" },
-          { id: 4, text: "Gift vouchers" },
           { id: 5, text: "Black Friday" },
           { id: 6, text: "ASOS x Thrifts+" },
         ],

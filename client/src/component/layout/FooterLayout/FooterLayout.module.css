@@ -64,9 +64,8 @@
   display: flex;
 }
 .foot_bottom {
-  bottom: 0;
-  font-size: 13px;
-  font-family: candara;
+  font-size: 11px;
+  font-family: sans-serif;
   font-weight: 500;
   background-color: #ddd;
   color: #2d2d2d;
