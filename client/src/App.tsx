@@ -11,6 +11,9 @@ import Home from "./component/pages/HomePage/HomePage";
 import Product from "./component/pages/Product/Product";
 import AuthBaseLayout from "./component/layout/AuthBaseLayout/AuthBaseLayout";
 import { store } from "./redux/Store";
+import TitleTableCommon from "./component/common/TitleTableCommon/TitleTableCommon";
+import TitleTableList from "./component/common/TitleTableCommon/TitleTableCommon";
+
 // import PrivateRouter from "./component/layout/PrivateRouter";
 // import { Provider } from "react-redux";
 // import { store } from "./redux/Store";
@@ -26,6 +29,8 @@ function App() {
         {/* <Login /> */}
         {/* <InputSearchCommon /> */}
         <AuthBaseLayout />
+        {/* <TitleTableCommon /> */}
+        {/* <TitleTableList /> */}
         <PrivateRouter />
       </Provider>
     </>

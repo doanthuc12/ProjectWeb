@@ -146,7 +146,7 @@ const NavBarLayout: React.FC = () => {
                 <button
                   className={Styles.widgets}
                   onMouseEnter={handleHover}
-                  onMouseOver={handleHover}
+                  // onMouseOver={handleHover}
                   // onMouseDownCapture={handleLeave}
                   // onClick={handleIconClick}
                 >

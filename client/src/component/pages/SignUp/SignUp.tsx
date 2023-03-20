@@ -45,32 +45,18 @@ const SignUp: React.FC = () => {
               </div>
             </Link>
           </div>
-
-          {/* INPUT */}
-          <div className={Styles.form}>
-            <div className={Styles.field}>
-              <InputCommon label="EMAIL ADDRESS" isInputPassword={false} />
-              <InputCommon label="PASSWORD" />
-            </div>
-
-            <div className={Styles.submit}>
-              <div className={Styles.sign_in}>Join ASOS</div>
-            </div>
-            <div className={Styles.text}>Forgot password?</div>
-          </div>
-
           {/* SOCIAL OPTION */}
           <div className={Styles.info}>
             <div
               style={{
                 textAlign: "center",
-                margin: "40px auto 40px",
+                margin: "135px 0 40px 0",
                 letterSpacing: "3px",
                 fontSize: "15px",
                 color: "#222222",
               }}
             >
-              <h3>OR SIGN UP WITH ...</h3>
+              <h3>SIGN UP WITH ...</h3>
             </div>
             <div className={Styles.options_social}>
               <div className={Styles.social_container}>
@@ -101,9 +87,86 @@ const SignUp: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className={Styles.text}>Where has Twitter Gone?</div>
-            <div>
-              <br />
+            <div className={Styles.text}>
+              Signing up with social is super quick. No extra passwords to
+              remember - no brain fail. Don't worry, we'd never share any of
+              your data or post anything on your behalf #notevil
+            </div>
+            <div
+              style={{
+                textAlign: "center",
+                margin: "40px auto 40px",
+                letterSpacing: "3px",
+                fontSize: "15px",
+                color: "#222222",
+              }}
+            >
+              <h3>OR SIGN UP WITH EMAIL</h3>
+            </div>
+          </div>
+
+          {/* INPUT */}
+          <div className={Styles.form}>
+            <div className={Styles.field}>
+              <InputCommon label="EMAIL ADDRESS" isInputPassword={false} />
+              <div className={Styles.input_note}>
+                We'll send your order confirmation here
+              </div>
+
+              <InputCommon label="FIRST NAME" isInputPassword={false} />
+              <InputCommon label="LAST NAME" isInputPassword={false} />
+              <InputCommon label="PASSWORD" isInputPassword={true} />
+              <InputCommon
+                type="datetime-local"
+                label="DATE OF BIRTH"
+                isInputPassword={false}
+              />
+
+              <div className={Styles.input_note}>
+                You need to be 16 or over to use ASOS
+              </div>
+            </div>
+
+            {/* INTEREST */}
+            <div className={Styles.interest_container}>
+              <div className={Styles.interest_label}>
+                <p className={Styles.label_text}>MOSTLY INTERESTED IN:</p>
+                <div className={Styles.radios}>
+                  <div className={Styles.form_check}>
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label
+                      className={Styles.form_check_label}
+                      htmlFor="flexRadioDefault1"
+                    >
+                      Womenswear
+                    </label>
+                  </div>
+                  <div className="form-check">
+                    <input
+                      className="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label
+                      className={Styles.form_check_label}
+                      htmlFor="flexRadioDefault2"
+                    >
+                      Menswear
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={Styles.submit}>
+              <div className={Styles.sign_up}>Join ASOS</div>
             </div>
           </div>
         </div>
