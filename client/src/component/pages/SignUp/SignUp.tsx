@@ -6,11 +6,16 @@ import facebook from "../../../images/facebook.png";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../../utils/constants/routes";
 import { useLocation } from "react-router-dom";
+import moment from "moment";
 
 const SignUp: React.FC = () => {
   const location = useLocation();
   const isSignUpPage = location.pathname === "/signup";
   const isSigninPage = location.pathname === "/signin";
+  const dateOfBirth = new Date(); // replace with the actual date of birth
+
+  // create a moment object from the date of birth and set the locale to 'fr'
+  const momentDateOfBirth = moment(dateOfBirth).locale("fr");
 
   return (
     <div className={Styles.surrounding}>
@@ -120,8 +125,8 @@ const SignUp: React.FC = () => {
                 type="datetime-local"
                 label="DATE OF BIRTH"
                 isInputPassword={false}
+                value={momentDateOfBirth.format("YYYY MM DD")}
               />
-
               <div className={Styles.input_note}>
                 You need to be 16 or over to use ASOS
               </div>

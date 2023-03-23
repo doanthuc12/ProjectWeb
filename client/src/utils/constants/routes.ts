@@ -14,4 +14,5 @@ export const ROUTES = {
   SIGNUP: "/signup",
   SIGNIN: "/signin",
   ADMIN_PRODUCT: MENU_PARRENT.ADMIN + "/products",
+  ADMIN_BAG: MENU_PARRENT.ADMIN + "/bag",
 };

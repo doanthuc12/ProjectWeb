@@ -51,7 +51,7 @@ const InputCommon: React.FC<IPropsInputCommon> = (props) => {
             <span
               onClick={handleShowPassword}
               style={{
-                color: isShowPassword ? "red" : "blue",
+                // color: isShowPassword ? "red" : "blue",
                 fontSize: "19px",
                 marginLeft: "3px",
               }}

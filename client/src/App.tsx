@@ -13,6 +13,8 @@ import AuthBaseLayout from "./component/layout/AuthBaseLayout/AuthBaseLayout";
 import { store } from "./redux/Store";
 import TitleTableCommon from "./component/common/TitleTableCommon/TitleTableCommon";
 import TitleTableList from "./component/common/TitleTableCommon/TitleTableCommon";
+import ItemBagCommon from "./component/common/ItemBagCommon/ItemBagCommon";
+import Bag from "./component/pages/Bag/Bag";
 
 // import PrivateRouter from "./component/layout/PrivateRouter";
 // import { Provider } from "react-redux";
@@ -22,15 +24,18 @@ function App() {
   return (
     <>
       <Provider store={store}>
+        <AuthBaseLayout />
+
         {/* <Product /> */}
         {/* <CardCommon /> */}
         {/* <NavBarLayout /> */}
         {/* <Home /> */}
         {/* <Login /> */}
         {/* <InputSearchCommon /> */}
-        <AuthBaseLayout />
         {/* <TitleTableCommon /> */}
         {/* <TitleTableList /> */}
+        {/* <ItemBagCommon /> */}
+        {/* <Bag /> */}
         <PrivateRouter />
       </Provider>
     </>

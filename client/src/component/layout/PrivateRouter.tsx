@@ -37,6 +37,10 @@ const PrivateRouter: React.FC = () => {
       element: lazy(() => import("../pages/Product/Product")),
     },
     {
+      path: ROUTES.ADMIN_BAG,
+      element: lazy(() => import("../pages/Bag/Bag")),
+    },
+    {
       path: ROUTES.ADMIN_ABOUT,
       element: lazy(() => import("../pages/About/About")),
     },

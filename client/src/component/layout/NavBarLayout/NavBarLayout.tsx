@@ -23,7 +23,7 @@ const NavBarLayout: React.FC = () => {
   const handleHover = () => {
     setShowTable(true);
   };
-  const handleCloseTable = () => {
+  const handleLeave = () => {
     setShowTable(false);
   };
   const listNav = useMemo(
@@ -143,25 +143,22 @@ const NavBarLayout: React.FC = () => {
             </div>
             <div className={Styles.mid_right_group}>
               <div className={Styles.widgets_wrapper}>
-                <button
-                  className={Styles.widgets}
-                  onMouseEnter={handleHover}
-                  // onMouseOver={handleHover}
-                  // onMouseDownCapture={handleLeave}
-                  // onClick={handleIconClick}
-                >
+                <button className={Styles.widgets} onMouseEnter={handleHover}>
                   <BsPerson className={Styles.widgets_icon} />
                 </button>
                 {showTable && (
                   <div
                     className={`animate__animated animate__fadeIn ${Styles.account_table}`}
+                    onMouseEnter={handleHover}
+                    onMouseLeave={handleLeave}
                   >
-                    <button
+                    {/* <button
                       className={Styles.close_button}
                       onClick={handleCloseTable}
                     >
                       <BsX />
-                    </button>
+                    </button> */}
+
                     <div className={Styles.table_container}>
                       <div className={Styles.table_top}>
                         <Link to={ROUTES.SIGNUP}>

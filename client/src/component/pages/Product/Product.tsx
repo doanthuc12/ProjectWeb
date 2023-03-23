@@ -2,11 +2,21 @@ import React from "react";
 import CardCommon from "../../common/CardCommon/CardCommon";
 import Styles from "./Product.module.css";
 import { Col, Row } from "react-bootstrap";
-import productItems from "../../../data/productItems.json";
+// import productItems from "../../../data/productItems.json";
 import NavBarLayout from "../../layout/NavBarLayout/NavBarLayout";
 import FooterLayout from "../../layout/FooterLayout/FooterLayout";
+import axios from "axios";
 
 const Product: React.FC = () => {
+  const [products, setProducts] = React.useState<Array<IProduct>>([]);
+
+  React.useEffect(() => {
+    axios.get("http://localhost:9000/products").then((response) => {
+      setProducts(response.data);
+      // console.log(response.data);
+    });
+  }, []);
+
   return (
     <>
       <div className="navbar">
@@ -14,7 +24,7 @@ const Product: React.FC = () => {
       </div>
       <div className={Styles.container}>
         <div className={Styles.productList}>
-          {productItems.map((item) => (
+          {products.map((item) => (
             <Row key={item.id}>
               <Col key={item.id}>
                 <CardCommon {...item} />
