@@ -25,7 +25,7 @@ const Bag: React.FC = () => {
         <div className={Styles.container}>
           {/* CONFIRM LIST PRODUCTS */}
           <div className={Styles.bag_content_wrapper}>
-            <div className={Styles.bag_content}>
+            <div className="col-8" style={{ marginRight: "10px" }}>
               <div className={Styles.bag_name}>
                 <h1 className={Styles.name}>MY BAG</h1>
                 <p className={Styles.warning}>
@@ -54,7 +54,7 @@ const Bag: React.FC = () => {
             </div>
 
             {/* SUB-TOTAL FORM */}
-            <div className={Styles.total_form}>
+            <div className="col-4">
               <div className={Styles.total_wrapper}>
                 <div className={Styles.total_top}>
                   <h1 className={Styles.name}>TOTAL</h1>
@@ -74,12 +74,12 @@ const Bag: React.FC = () => {
                   </div>
                   {/* SELECT DELIVERY */}
                   <select
-                    className="form-select form-select-sm"
+                    className={Styles.form_select}
                     aria-label=".form-select-sm example"
                   >
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    <option selected>Standard Delivery (£10.00)</option>
+                    <option value="1">Standard Delivery (£10.00)</option>
+                    <option value="2">Express Delivery (£20.00)</option>
                   </select>
                   <button className={Styles.btn}>CHECKOUT</button>
                 </div>

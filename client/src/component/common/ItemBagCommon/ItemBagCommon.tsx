@@ -48,16 +48,16 @@ const ItemBagCommon: React.FC<IPropsItemBagCommon> = (props) => {
     <>
       <div className={Styles.surrounding}>
         <div className={Styles.container}>
+          {/* LEFT*/}
           <div className={Styles.left}>
             <div>
-              {/* LEFT*/}
               <div
                 className={Styles.image}
                 style={{ backgroundImage: `url(${imgLeave})` }}
               ></div>
             </div>
           </div>
-
+          {/* RIGHT*/}
           <div className={Styles.right}>
             <div className={Styles.price}>
               <span className={Styles.normal_price}>

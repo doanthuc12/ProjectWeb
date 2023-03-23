@@ -4,7 +4,7 @@ import Styles from "./NavBarLayout.module.css";
 import { FiSearch } from "react-icons/fi";
 import { BsBox2, BsPerson, BsQuestionCircle, BsX } from "react-icons/bs";
 import { TbMessageDots } from "react-icons/tb";
-import { AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineHeart, AiTwotoneShopping } from "react-icons/ai";
 import { RiShoppingBagLine } from "react-icons/ri";
 import "animate.css";
 import ButtonCommon from "../../common/ButtonCommon/ButtonCommon";
@@ -19,12 +19,17 @@ const NavBarLayout: React.FC = () => {
   const isWomenPage = location.pathname === "/women";
   const isMenPage = location.pathname === "/men";
   const [showTable, setShowTable] = useState(false);
+  const [isShowBag, setIsShowBag] = useState(true);
 
   const handleHover = () => {
     setShowTable(true);
   };
   const handleLeave = () => {
     setShowTable(false);
+  };
+
+  const handleClick = () => {
+    setIsShowBag(!isShowBag);
   };
   const listNav = useMemo(
     () => [
@@ -224,8 +229,18 @@ const NavBarLayout: React.FC = () => {
               <button className={Styles.widgets}>
                 <AiOutlineHeart className={Styles.widgets_icon} />
               </button>
-              <button className={Styles.widgets}>
-                <RiShoppingBagLine className={Styles.widgets_icon} />
+
+              <button className={Styles.widgets} onClick={handleClick}>
+                <Link to={"/bag"}>
+                  <div>
+                    {isShowBag ? (
+                      <RiShoppingBagLine className={Styles.widgets_icon} />
+                    ) : (
+                      <AiTwotoneShopping className={Styles.widgets_icon} />
+                    )}
+                  </div>
+                </Link>
+                {/* <RiShoppingBagLine className={Styles.widgets_icon} /> */}
               </button>
             </div>
           </div>
