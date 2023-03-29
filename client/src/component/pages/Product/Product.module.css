@@ -3,24 +3,34 @@
   border: 0;
 }
 .container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
   max-width: 1366px;
-  padding: 0 160px;
+  padding: 0 83px;
+  margin-bottom: 40px;
 }
 .navbar {
   position: absolute;
   width: 100%;
   height: 30%;
 }
-.productList {
+.product {
   /* width: 23%; */
+  /* width: 1384px; */
   height: 70%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: visible;
   position: relative;
+}
+.product {
+  /* width: 1384px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px; */
 }

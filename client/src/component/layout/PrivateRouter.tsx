@@ -6,6 +6,7 @@ import AuthBaseLayout from "./AuthBaseLayout/AuthBaseLayout";
 
 const PrivateRouter: React.FC = () => {
   const privateRoutes = [
+    // HOMEPAGE
     {
       path: ROUTES.ADMIN_MEN,
       element: lazy(() => import("../pages/HomePage/HomePage")),
@@ -24,6 +25,8 @@ const PrivateRouter: React.FC = () => {
       path: "/",
       element: lazy(() => import("../pages/HomePage/HomePage")),
     },
+
+    // SIGNIN_SIGNUP
     {
       path: ROUTES.SIGNUP,
       element: lazy(() => import("../pages/SignUp/SignUp")),
@@ -32,14 +35,106 @@ const PrivateRouter: React.FC = () => {
       path: ROUTES.SIGNIN,
       element: lazy(() => import("../pages/SignIn/SignIn")),
     },
+
+    // PRODUCT PAGE
     {
       path: ROUTES.ADMIN_PRODUCT,
       element: lazy(() => import("../pages/Product/Product")),
     },
     {
+      path: ROUTES.ADMIN_PRODUCT_SALE,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "sale",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_NEWIN,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "new in",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_CLOTHING,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "clothing",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_SHOES,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "shoes",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_ACCESSORIES,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "accessories",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_SPORTSWEAR,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "sportswear",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_JEANS,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "jeans",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_BRANDS,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "brands",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_TOPMAN,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "topman",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_OUTLET,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "outlet",
+      } as IProduct,
+    },
+    {
+      path: ROUTES.ADMIN_PRODUCT_MARKETPLACE,
+      element: lazy(() => import("../pages/Product/Product")),
+      props: {
+        type: "marketplace",
+      } as IProduct,
+    },
+    //DETAILPRODUCT
+    {
+      path: ROUTES.ADMIN_DETAILPRODUCT,
+      element: lazy(() => import("../pages/DetailProduct/DetailPage")),
+    },
+
+    // BAG_PAGE
+    {
       path: ROUTES.ADMIN_BAG,
       element: lazy(() => import("../pages/Bag/Bag")),
     },
+    // SAVED_PAGE
+    {
+      path: ROUTES.ADMIN_SAVED,
+      element: lazy(() => import("../pages/Saved/Saved")),
+    },
+
     {
       path: ROUTES.ADMIN_ABOUT,
       element: lazy(() => import("../pages/About/About")),

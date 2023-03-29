@@ -6,6 +6,20 @@ interface IProduct {
   imgHover?: string;
   imgLeave?: string;
   title?: string;
+
+  type:
+    | "sale"
+    | "new in"
+    | "clothing"
+    | "shoes"
+    | "accessories"
+    | "sportswear"
+    | "jeans"
+    | "brands"
+    | "topman"
+    | "outlet"
+    | "marketplace"
+    | undefined;
 }
 
 interface IProducts {

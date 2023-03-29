@@ -26,23 +26,21 @@ const SignIn: React.FC = () => {
         {/* HEADER FORM */}
         <div className={Styles.main}>
           <div className={Styles.option}>
-            <Link to={ROUTES.SIGNUP}>
-              <div
-                className={`${Styles.titleJ} ${
-                  isSignUpPage ? Styles.active : ""
-                }`}
-              >
-                Join
-              </div>
+            <Link
+              to={ROUTES.SIGNUP}
+              className={`${Styles.titleJ} ${
+                isSignUpPage ? Styles.active : ""
+              }`}
+            >
+              Join
             </Link>
-            <Link to={ROUTES.SIGNIN}>
-              <div
-                className={`${Styles.titleS} ${
-                  isSigninPage ? Styles.active : ""
-                }`}
-              >
-                Sign in
-              </div>
+            <Link
+              to={ROUTES.SIGNIN}
+              className={`${Styles.titleS} ${
+                isSigninPage ? Styles.active : ""
+              }`}
+            >
+              Sign in
             </Link>
           </div>
 
