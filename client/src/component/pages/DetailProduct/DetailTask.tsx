@@ -1,5 +1,5 @@
 import React from "react";
-import DropdownItem from "./DropDownDetail";
+import DropdownItem from "./Task";
 
 const DetailProduct: React.FC = () => {
   return (
@@ -24,4 +24,3 @@ const DetailProduct: React.FC = () => {
 };
 
 export default DetailProduct;
-

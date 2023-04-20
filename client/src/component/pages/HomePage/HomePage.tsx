@@ -53,7 +53,7 @@ const HomePage: React.FC<IHomePage> = (props) => {
         <div className={Styles.bgimg_sale}>
           <img
             className={Styles.img_sale}
-            alt="asos_sale"
+            alt="img_sale"
             src="https://content.asos-media.com/-/media/homepages/unisex/homepages/2023/feb/2023-spinner/web_spinner_gbl_215x40.gif"
           />
         </div>

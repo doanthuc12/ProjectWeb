@@ -38,7 +38,7 @@ export const ROUTES = {
   ADMIN_PRODUCT_MARKETPLACE: MENU_PARRENT.ADMIN + "/products/marketplace",
 
   //DETAILPRODUCT
-  ADMIN_DETAILPRODUCT: MENU_PARRENT.ADMIN + "products/detailproduct",
+  ADMIN_DETAILPRODUCT: MENU_PARRENT.ADMIN + "products/:productId",
 
   // BAG_PAGE
   ADMIN_BAG: MENU_PARRENT.ADMIN + "/bag",

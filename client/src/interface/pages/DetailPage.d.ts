@@ -3,7 +3,7 @@ interface ProductItem {
   price: string;
   thumbnails: string[];
   images: string[];
-  description:string;
+  description: string;
   Colour: string;
   select: string[];
 }

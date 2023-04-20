@@ -6,17 +6,20 @@ import { RiErrorWarningLine } from "react-icons/ri";
 // import productItems from "../../../data/productItems.json";
 import NavBarLayout from "../../layout/NavBarLayout/NavBarLayout";
 import FooterLayout from "../../layout/FooterLayout/FooterLayout";
-import axios from "axios";
+// import axios from "axios";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../redux/Store";
 
 const Bag: React.FC = () => {
-  const [products, setProducts] = React.useState<Array<IProduct>>([]);
+  // const [products, setProducts] = React.useState<Array<IProduct>>([]);
+  const { products } = useSelector((state: RootState) => state.cart);
 
-  React.useEffect(() => {
-    axios.get("http://localhost:9000/products").then((response) => {
-      setProducts(response.data);
-      // console.log(response.data);
-    });
-  }, []);
+  // React.useEffect(() => {
+  //   axios.get("http://localhost:9000/products").then((response) => {
+  //     setProducts(response.data);
+  //     // console.log(response.data);
+  //   });
+  // }, []);
   return (
     <>
       <NavBarLayout />
@@ -25,7 +28,7 @@ const Bag: React.FC = () => {
         <div className={Styles.container}>
           {/* CONFIRM LIST PRODUCTS */}
           <div className={Styles.bag_content_wrapper}>
-            <div className="col-8" style={{ marginRight: "10px" }}>
+            <div className={Styles.bag_content}>
               <div className={Styles.bag_name}>
                 <h1 className={Styles.name}>MY BAG</h1>
                 <p className={Styles.warning}>
@@ -34,9 +37,9 @@ const Bag: React.FC = () => {
               </div>
               {/* PRODUCT LIST */}
               <div className={Styles.productList}>
-                {products.map((item) => (
-                  <Row key={item.id}>
-                    <Col key={item.id}>
+                {products?.map((item) => (
+                  <Row key={item._id}>
+                    <Col key={item._id}>
                       <ItemBagCommon {...item} />
                     </Col>
                   </Row>
@@ -54,7 +57,7 @@ const Bag: React.FC = () => {
             </div>
 
             {/* SUB-TOTAL FORM */}
-            <div className="col-4">
+            <div className={Styles.total_form}>
               <div className={Styles.total_wrapper}>
                 <div className={Styles.total_top}>
                   <h1 className={Styles.name}>TOTAL</h1>
@@ -68,19 +71,17 @@ const Bag: React.FC = () => {
                     <span>Delivery</span>
                     <div className={Styles.deli_icon}>
                       <RiErrorWarningLine
-                        style={{ height: "17px", width: "20px" }}
+                        style={{ height: "17px", width: "20px", color: "gray" }}
                       />
                     </div>
                   </div>
                   {/* SELECT DELIVERY */}
-                  <select
-                    className={Styles.form_select}
-                    aria-label=".form-select-sm example"
-                  >
+                  <select className={Styles.select}>
                     <option selected>Standard Delivery (£10.00)</option>
-                    <option value="1">Standard Delivery (£10.00)</option>
-                    <option value="2">Express Delivery (£20.00)</option>
+                    <option value="1">Express Delivery (£20.00)</option>
+                    <option value="2">...</option>
                   </select>
+                  <hr />
                   <button className={Styles.btn}>CHECKOUT</button>
                 </div>
                 <div className={Styles.bot}>

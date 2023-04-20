@@ -33,7 +33,7 @@ const Saved: React.FC = () => {
           ))}
         </div>
       </div>
-      <FooterLayout/>
+      <FooterLayout />
     </div>
   );
 };

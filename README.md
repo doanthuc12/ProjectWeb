@@ -147,6 +147,7 @@ React Router (https://reactrouter.com/en/main) npm install react-router-dom
 **Redux toolkit**
 (https://redux-toolkit.js.org/usage/usage-with-typescript)
 npm install redux react-redux @reduxjs/toolkit @types/redux-logger
+npm i redux-thunk
 
 Note: Toolkit useAppDispatch & useAppSelector
 Declare export type RootState = ReturnType; export type AppDispatch = typeof store.dispatch; type TypedDispatch = ThunkDispatch<T, any, AnyAction>; export const useAppDispatch = () => useDispatch<TypedDispatch>(); export const useAppSelector: TypedUseSelectorHook = useSelector;

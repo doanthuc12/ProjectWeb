@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+// import React, { useMemo } from "react";
 import numeral from "numeral";
 import "numeral/locales/en-gb";
 import Styles from "./ItemSavedCommon.module.css";
@@ -8,18 +8,18 @@ numeral.locale("en-gb");
 const ItemSavedCommon: React.FC<IPropsItemBagCommon> = (props) => {
   const { title, imgLeave, normalPrice, price, total, discount } = props;
 
-  const formattedoldPrice = price ? numeral(price).format("$0,0") : null;
+  // const formattedoldPrice = price ? numeral(price).format("$0,0") : null;
 
   const formattednewPrice = total ? numeral(total).format("$0,0") : null;
 
-  const listSelect = [
-    { id: 1, text: "SIZE", value: "1" },
-    { id: 2, text: "XS", value: "2" },
-    { id: 3, text: "S", value: "3" },
-    { id: 4, text: "M", value: "4" },
-    { id: 5, text: "L", value: "5" },
-    { id: 6, text: "XL", value: "6" },
-  ];
+  // const listSelect = [
+  //   { id: 1, text: "SIZE", value: "1" },
+  //   { id: 2, text: "XS", value: "2" },
+  //   { id: 3, text: "S", value: "3" },
+  //   { id: 4, text: "M", value: "4" },
+  //   { id: 5, text: "L", value: "5" },
+  //   { id: 6, text: "XL", value: "6" },
+  // ];
 
   return (
     <div>

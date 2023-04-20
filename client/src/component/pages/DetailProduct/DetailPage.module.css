@@ -5,11 +5,11 @@
 
 .main_top {
   width: 100%;
-  height: 640px;
+  height: 650px;
   padding-top: 50px;
   display: flex;
   margin-bottom: 70px;
-  
+  border-bottom: solid 1px gray;
 }
 
 .left_top {
@@ -177,4 +177,12 @@
 .title_mid {
   font-size: 17px;
   font-weight: 700;
+}
+
+.main_bottom {
+  width: 100%;
+  height: 640px;
+  padding-top: 50px;
+  display: flex;
+  margin-bottom: 70px;
 }

@@ -6,7 +6,7 @@
 .bg_sale {
   width: 100%;
   height: 345px;
-  background-color: #26e066;
+  background: linear-gradient(90deg, #ccff00 0%, #ff385c 100%);
 }
 
 .bgimg_sale {

@@ -6,45 +6,24 @@
 }
 
 .foot_top {
-  /* width: 100%; */
-  height: 60px;
+  width: 100%;
   background: #fff;
   text-align: center;
   border-top: rgb(233, 232, 232) solid 1px;
 }
 .top_social {
   display: flex;
+  width: 660px;
+  height: 40px;
+  margin: auto;
 }
 .social_group {
-  width: 44%;
+  width: 100%;
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-}
-.icon_social {
-  margin-left: 60px;
-}
-.icon {
-  width: 30px;
-}
-
-.payment {
-  width: 56%;
-  list-style: none;
-  margin: 20px 0 20px 50px;
-  padding: 0 0 0 50px;
-  height: 20px;
-  display: flex;
-  vertical-align: top;
-  border-left: 1px solid #999;
-  text-align: left;
-  overflow: hidden;
-}
-.payment_icon {
-  width: 30px;
-  padding-right: 40px;
+  justify-content: center;
 }
 
 .info {

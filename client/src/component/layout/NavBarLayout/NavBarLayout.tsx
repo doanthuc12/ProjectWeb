@@ -1,11 +1,11 @@
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import Styles from "./NavBarLayout.module.css";
 import { Col, Row } from "react-bootstrap";
 
 import { FiSearch } from "react-icons/fi";
-import { BsBox2, BsPerson, BsQuestionCircle, BsX } from "react-icons/bs";
+import { BsBox2, BsPerson, BsQuestionCircle } from "react-icons/bs";
 import { TbMessageDots } from "react-icons/tb";
 import { AiOutlineHeart, AiTwotoneShopping } from "react-icons/ai";
 import { RiShoppingBagLine } from "react-icons/ri";

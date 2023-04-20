@@ -1,30 +1,36 @@
 import React from "react";
 import CardCommon from "../../common/CardCommon/CardCommon";
+// import productItems from "../../../data/productItems.json"
 import Styles from "./Product.module.css";
 import { Col, Row } from "react-bootstrap";
-// import productItems from "../../../data/productItems.json";
+import axios from "axios";
 import NavBarLayout from "../../layout/NavBarLayout/NavBarLayout";
 import FooterLayout from "../../layout/FooterLayout/FooterLayout";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
-const Product: React.FC<IProduct> = (props) => {
+const ProductPage: React.FC<IProduct> = (props) => {
   const { type } = props;
 
-  const [products, setProducts] = React.useState<Array<IProduct>>([]);
+  const [products, setProducts] = React.useState<Array<ICardCommon>>([]);
 
   React.useEffect(() => {
     axios.get("http://localhost:9000/products").then((response) => {
       setProducts(response.data);
-      // console.log(response.data);
     });
   }, []);
-
   return (
-    <>
-      <div className="navbar">
-        <NavBarLayout />
-      </div>
-      <div className={Styles.container}>
+    <div>
+      <NavBarLayout />
+      <div className={Styles.bg_product}>
+        {/* <div className={Styles.product}>
+          {products.map((item) => (
+            <Row>
+              <Col key={item._id}>
+                <CardCommon {...item} />
+              </Col>
+            </Row>
+          ))}
+        </div> */}
         {type === "sale" ? (
           <div className={Styles.product}>
             {products
@@ -34,7 +40,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -49,7 +57,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -64,7 +74,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -79,7 +91,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -94,7 +108,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -109,7 +125,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -124,7 +142,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -139,7 +159,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -154,7 +176,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -169,7 +193,9 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
@@ -184,19 +210,17 @@ const Product: React.FC<IProduct> = (props) => {
               .map((item) => (
                 <Row>
                   <Col key={item._id}>
-                    <CardCommon {...item} />
+                    <Link className={Styles.link} to={`/products/${item._id}`}>
+                      <CardCommon {...item} />
+                    </Link>
                   </Col>
                 </Row>
               ))}
           </div>
         ) : null}
       </div>
-
-      <div className="navbar">
-        <FooterLayout />
-      </div>
-    </>
+      <FooterLayout />
+    </div>
   );
 };
-
-export default Product;
+export default ProductPage;

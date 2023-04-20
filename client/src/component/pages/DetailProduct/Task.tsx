@@ -1,18 +1,13 @@
 import React from "react";
-import DropDown from "./DropDetail";
+import OpenTask from "./OpenTask";
 
 interface DropdownItemProps {
   title: string;
   children: React.ReactNode;
-
 }
 
 const DropDownDetail: React.FC<DropdownItemProps> = ({ title, children }) => {
-  return (
-    <DropDown title={title}>
-      {children}
-    </DropDown>
-  );
+  return <OpenTask title={title}>{children}</OpenTask>;
 };
 
 export default DropDownDetail;

@@ -1,5 +1,5 @@
-interface IProduct {
-  _id: string | number;
+interface IRecommendItem {
+  _id?: string | number;
   discount?: number;
   price?: number;
   selling?: boolean;
@@ -8,7 +8,7 @@ interface IProduct {
   title?: string;
   branchId?: string | undefined;
 
-  type:
+  type?:
     | "sale"
     | "new in"
     | "clothing"
@@ -23,6 +23,6 @@ interface IProduct {
     | undefined;
 }
 
-interface IProducts {
-  products: Array<IProduct>;
+interface IRecommendItems {
+  products: Array<IRecommendItem>;
 }

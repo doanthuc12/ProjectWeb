@@ -1,29 +1,28 @@
-import React, { useState } from "react";
 import numeral from "numeral";
 import "numeral/locales/en-gb";
+import React, { useState } from "react";
 import Styles from "./CardCommon.module.css";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+// import { Link } from "react-router-dom";
+// import { ROUTES } from "../../../utils/constants/routes";
 
 numeral.locale("en-gb");
 
-const CardCommon: React.FC<IPropsCardCommon> = (props) => {
-  const { title, label, price, total, discount, imgHover, imgLeave } = props;
+const CardCommon: React.FC<ICardCommon> = (props) => {
+  const { discount, selling, imgHover, imgLeave, title, price, total } = props;
+
   const [imgUrl, setImageUrl] = useState(true);
+
   const tradeImgUrl = () => {
     setImageUrl(!imgUrl);
   };
+
   const [isShowLike, setIsShowLike] = useState(true);
 
   const handleClick = () => {
     setIsShowLike(!isShowLike);
   };
-  // const handleMouseOver = () => {
-  //   setImageUrl(hoverImageSrc);
-  // };
 
-  // const handleMouseLeave = () => {
-  //   setImageUrl(defaultImageSrc);
-  // };
   const formattedDiscount = discount
     ? numeral(-discount / parseFloat("100")).format("%")
     : null;
@@ -33,59 +32,44 @@ const CardCommon: React.FC<IPropsCardCommon> = (props) => {
   const formattednewPrice = total ? numeral(total).format("$0,0") : null;
 
   return (
-    <>
-      <div className={Styles.surrounding}>
-        <div className={Styles.top}>
-          <div className={Styles.bg_image}>
-            <div
-              className={Styles.image}
-              style={{
-                backgroundImage: `url(${imgUrl ? imgLeave : imgHover})`,
-              }}
-              onMouseOver={tradeImgUrl}
-              onMouseLeave={tradeImgUrl}
-            >
-              <div className={Styles.discount}>
-                {formattedDiscount ? <span>{formattedDiscount}</span> : null}
-              </div>
-
-              <div>
-                {label ? <div className={Styles.label_hot}>{label}</div> : null}
-              </div>
-              <div className={Styles.like}>
-                <button className={Styles.btn_like} onClick={handleClick}>
-                  {isShowLike ? (
-                    <AiOutlineHeart className={Styles.heart} />
-                  ) : (
-                    <AiFillHeart className={Styles.heart} />
-                  )}
-                </button>
-              </div>
-            </div>
-          </div>
+    <div className={Styles.product}>
+      <div
+        className={Styles.image}
+        style={{ backgroundImage: `url(${imgUrl ? imgLeave : imgHover})` }}
+        onMouseOver={tradeImgUrl}
+        onMouseLeave={tradeImgUrl}
+      >
+        <div className={Styles.discount}>
+          {formattedDiscount ?? <span>{formattedDiscount}</span>}
         </div>
-
-        <div className={Styles.bottom}>
-          <div className={Styles.title}>{title ?? <div>{title}</div>}</div>
-          <div className={Styles.price}>
-            <span className={Styles.normal_price}></span>
-
-            <span className={Styles.old_price}>
-              {discount ? <span>{formattedoldPrice}</span> : null}
-            </span>
-
-            <span
-              className={` ${
-                discount ? Styles.new_price : Styles.normal_price
-              }`}
-            >
-              {formattednewPrice ?? <span>{formattednewPrice}</span>}
-            </span>
-          </div>
+        <div>
+          {selling ? <div className={Styles.selling}>selling fast</div> : null}
+        </div>
+        <div className={Styles.like}>
+          <button className={Styles.btn_like} onClick={handleClick}>
+            {isShowLike ? (
+              <AiOutlineHeart className={Styles.heart} />
+            ) : (
+              <AiFillHeart className={Styles.heart} />
+            )}
+          </button>
         </div>
       </div>
-    </>
+      <div className={Styles.title}>{title ?? <div>{title}</div>}</div>
+      <div className={Styles.price}>
+        <span className={Styles.normal_price}></span>
+
+        <span className={Styles.old_price}>
+          {discount ? <span>{formattedoldPrice}</span> : null}
+        </span>
+
+        <span
+          className={` ${discount ? Styles.new_price : Styles.normal_price}`}
+        >
+          {formattednewPrice ?? <span>{formattednewPrice}</span>}
+        </span>
+      </div>
+    </div>
   );
 };
-
 export default CardCommon;

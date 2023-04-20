@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Styles from "./InputSearchCommon.module.css";
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+// import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
 interface IStateInputCommon {
   isShowPassword: boolean;
@@ -14,10 +14,10 @@ const defaultValueState: IStateInputCommon = {
 
 const InputSearchCommon: React.FC<IPropsInputCommon> = (props) => {
   const {
-    label,
-    color = "gray",
-    isInputPassword = true,
-    type = "text",
+    // label,
+    // color = "gray",
+    // isInputPassword = true,
+    // type = "text",
     className,
     placeholder,
   } = props;
